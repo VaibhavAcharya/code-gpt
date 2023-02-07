@@ -2,43 +2,38 @@ import * as vscode from 'vscode';
 
 import axios from "axios";
 
-let email: string | undefined;
-
 // Function to check if the email has been saved or not
-const checkEmail = async () => {
+const checkEmail = async (context: vscode.ExtensionContext) => {
+    const email = await context.globalState.get("email");
+    
+    // If the email has not been saved, ask the user for their email
     if (!email) {
-        // Get the user's email from the configuration
-        const config = vscode.workspace.getConfiguration('Code-GPT');
-        email = config.get('email');
-        
-        // If the email has not been saved, ask the user for their email
-        if (!email) {
-            email = await vscode.window.showInputBox({
-                title: "Code-GPT",
-                placeHolder: '📧 Enter your email',
-                prompt: "To protect us from unlimited use. We won't spam your email, promise. 🤝",
-                validateInput: (value) => {
-                    const emailRegex = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        const newEmail = await vscode.window.showInputBox({
+            title: "Code-GPT",
+            placeHolder: '📧 Enter your email',
+            prompt: "To protect us from unlimited use. We won't spam your email, promise. 🤝",
+            validateInput: (value) => {
+                const emailRegex = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
-                    if (!emailRegex.test(value)) {
-                        return "Error: Invalid email. ☹";
-                    }
-
-                    return null;
+                if (!emailRegex.test(value)) {
+                    return "Error: Invalid email. ☹";
                 }
-            });
-            
-            // Save the email in the configuration
-            config.update('email', email, vscode.ConfigurationTarget.Global);
-        }
+
+                return null;
+            }
+        });
+        
+        await context.globalState.update("email", newEmail);
     }
 };
 
 // Function to handle the selected code
-const handleSelectedCode = async () => {
+const handleSelectedCode = async (context: vscode.ExtensionContext) => {
   // Check if the email has been saved or not
-  await checkEmail();
-  
+  await checkEmail(context);
+
+  const email = await context.globalState.get("email");
+
   // Get the selected text
   const editor = vscode.window.activeTextEditor;
 
@@ -85,7 +80,7 @@ const handleSelectedCode = async () => {
 
 // Register the "Explain Selected Code" command
 export function activate(context: vscode.ExtensionContext) {
-  context.subscriptions.push(vscode.commands.registerCommand('extension.explainSelectedCode', handleSelectedCode));
+  context.subscriptions.push(vscode.commands.registerCommand('extension.explainSelectedCode', () => handleSelectedCode(context)));
 }
 
 // Deactivate the extension

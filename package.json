@@ -31,10 +31,9 @@
 		"Other"
 	],
 	"keywords": [
-		"github",
-		"gists",
-		"snippets",
-		"autocomplete"
+		"ai",
+		"code",
+		"comments"
 	],
 	"activationEvents": [
 		"*"

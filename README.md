@@ -1,4 +1,4 @@
-![header](/images/header.png)
+![header](https://www.aiproducttools.com/images/codegpt/header.png)
 
 # [Code-GPT](https://marketplace.visualstudio.com/items?itemName=vaibhavacharya.code-gpt) — Make sense of any code, anytime. 🚀
 
@@ -13,7 +13,7 @@ With Code-GPT, you can:
 - 🔍 Improve your coding skills with in-depth code analysis
 
 ## Demo 📽
-![demo](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/w8x56ui60ig4lh6dpdl0.gif)
+![demo](https://www.aiproducttools.com/images/codegpt/demo.mp4)
 
 ## Installation 📦
 

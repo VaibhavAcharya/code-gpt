@@ -1,6 +1,6 @@
 ![header](https://www.aiproducttools.com/images/codegpt/header.png)
 
-# [Code-GPT](https://marketplace.visualstudio.com/items?itemName=vaibhavacharya.code-gpt) — Make sense of any code, anytime. 🚀
+# [Code-GPT](https://marketplace.visualstudio.com/items?itemName=vaibhavacharya.code-gpt-va) — Make sense of any code, anytime. 🚀
 
 ## Introduction 👋
 

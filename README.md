@@ -4,7 +4,7 @@
 
 ## Introduction 👋
 
-GistSnip is an extension for VS Code that provides you **instant explanations for your code** within the code editor using AI.
+Code-GPT is an extension for VS Code that provides you **instant explanations for your code** within the code editor using AI.
 
 With Code-GPT, you can:
 - 🧠 Get instant explanations for selected code in real-time

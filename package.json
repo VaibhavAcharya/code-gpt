@@ -7,7 +7,7 @@
 		"color": "#000000",
 		"theme": "dark"
 	},
-	"version": "0.0.2",
+	"version": "0.0.3",
 	"publisher": "vaibhavacharya",
 	"author": {
 		"name": "Vaibhav Acharya",
@@ -27,11 +27,13 @@
 		"url": "https://github.com/VaibhavAcharya/code-gpt/issues"
 	},
 	"categories": [
+		"Machine Learning",
 		"Other"
 	],
 	"keywords": [
 		"ai",
 		"code",
+		"explanation",
 		"comments"
 	],
 	"activationEvents": [

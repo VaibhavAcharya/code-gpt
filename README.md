@@ -12,8 +12,8 @@ With Code-GPT, you can:
 - ⏳ Save time and minimize frustration with clear code explanations
 - 🔍 Improve your coding skills with in-depth code analysis
 
-## [Demo](https://www.aiproducttools.com/images/codegpt/demo.mp4) 📽
-<video src="https://www.aiproducttools.com/images/codegpt/demo.mp4" width="100%" height="auto"></video>
+## Demo 📽
+[![demo video](https://www.aiproducttools.com/images/codegpt/demo.gif)](https://www.aiproducttools.com/images/codegpt/demo.mp4)
 
 ## Installation 📦
 

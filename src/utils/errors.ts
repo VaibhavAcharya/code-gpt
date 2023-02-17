@@ -10,5 +10,5 @@ const errorMessages = {
 };
 
 export const displayError = (error: keyof typeof errorMessages) => {
-    return window.showErrorMessage(errorMessages.noEmail);
+    return window.showErrorMessage(errorMessages[error]);
 };

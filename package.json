@@ -46,7 +46,15 @@
 				"command": "extension.explainSelectedCode",
 				"title": "Code-GPT → Explain Selected Code"
 			}
-		]
+		], 
+		"menus": { 
+			"commandPalette": [ 
+				{ 
+					"command": "extension.explainSelectedCode", 
+					"when": "editorHasSelection" 
+				}
+			] 
+		}
 	},
 	"scripts": {
 		"vscode:prepublish": "npm run compile",

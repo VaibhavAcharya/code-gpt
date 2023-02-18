@@ -43,17 +43,25 @@
 	"contributes": {
 		"commands": [
 			{
+				"command": "extension.commentSelectedCode",
+				"title": "Code-GPT → Comment Selected Code"
+			},
+			{
 				"command": "extension.explainSelectedCode",
 				"title": "Code-GPT → Explain Selected Code"
 			}
-		], 
-		"menus": { 
-			"commandPalette": [ 
-				{ 
-					"command": "extension.explainSelectedCode", 
-					"when": "editorHasSelection" 
-				}
-			] 
+		],
+		"menus": {
+			"editor/context": [
+			  {
+				  "command": "extension.commentSelectedCode",
+				  "when": "editorHasSelection"
+			  },
+			  {
+				  "command": "extension.explainSelectedCode",
+				  "when": "editorHasSelection"
+			  }
+			]	
 		}
 	},
 	"scripts": {

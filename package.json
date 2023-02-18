@@ -43,6 +43,10 @@
 	"contributes": {
 		"commands": [
 			{
+				"command": "extension.commentSelectedCode",
+				"title": "Code-GPT → Comment Selected Code"
+			},
+			{
 				"command": "extension.explainSelectedCode",
 				"title": "Code-GPT → Explain Selected Code"
 			}

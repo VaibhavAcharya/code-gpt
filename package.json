@@ -54,16 +54,15 @@
 		"menus": {
 			"editor/context": [
 			  {
-				"command": "extension.commentSelectedCode",
-				"when": "editorHasSelection"
+				  "command": "extension.commentSelectedCode",
+				  "when": "editorHasSelection"
 			  },
 			  {
-				"command": "extension.explainSelectedCode",
-				"when": "editorHasSelection"
+				  "command": "extension.explainSelectedCode",
+				  "when": "editorHasSelection"
 			  }
-			]
-			
-		  }
+			]	
+		}
 	},
 	"scripts": {
 		"vscode:prepublish": "npm run compile",
